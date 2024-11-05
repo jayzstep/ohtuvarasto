@@ -31,3 +31,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Analyze code with pylint
         run: poetry run pylint src --fail-under=10
+      - name: Debug
+        run: |
+            pwd
+            ls -la
