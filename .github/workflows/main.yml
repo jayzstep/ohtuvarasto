@@ -29,10 +29,6 @@ jobs:
         uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - name: Debug
-        run: |
-            pwd
-            ls -la
       - name: Analyze code with pylint
         run: poetry run pylint src --fail-under=10
 
